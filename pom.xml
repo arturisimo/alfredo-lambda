@@ -3,6 +3,7 @@
   <groupId>apz.java</groupId>
   <artifactId>lambda</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
   <dependencies>
   	<dependency>
   		<groupId>junit</groupId>
@@ -10,5 +11,10 @@
   		<version>4.12</version>
   		<scope>test</scope>
   	</dependency>
+	<dependency>
+    	<groupId>com.sun.xml.bind</groupId>
+    	<artifactId>jaxb-impl</artifactId>
+    	<version>2.2.11</version>
+	</dependency>
   </dependencies>
 </project>

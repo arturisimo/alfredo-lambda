@@ -1,6 +1,5 @@
 package apz.java.bean;
 
-import java.util.Comparator;
 
 public class Student {
 	   private int id;
@@ -29,18 +28,24 @@ public class Student {
 	      this.cgpa = cgpa;
 	}
 	  
-
 	public int getId() {
-	      return id;
-	   }
-	   public String getFname() {
-	      return fname;
-	   }
-	   public double getCgpa() {
-	      return cgpa;
-	   }
-	   
-	   
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getFname() {
+		return fname;
+	}
+	public void setFname(String fname) {
+		this.fname = fname;
+	}
+	public double getCgpa() {
+		return cgpa;
+	}
+	public void setCgpa(double cgpa) {
+		this.cgpa = cgpa;
+	}
 
 	/**
 	 * @return the age
@@ -80,22 +85,7 @@ public class Student {
 				+ ", cgpa=" + cgpa + "]";
 	}
 	
-	public static Comparator<Student> getComparator() {   
-		   
-		   Comparator<Student> comp = new Comparator<Student>(){
-			   
-			   @Override
-		       public int compare(Student a, Student b) {
-		           if (a.getCgpa() > b.getCgpa()) {
-		        	   return -1;
-		           } else if (a.getCgpa() < b.getCgpa()) {
-		        	   return 1;
-			   	   }
-				   return a.getFname().compareTo(b.getFname());
-		       }
-			   
-		   };
-		   
-		   return comp;
-	   }
+	public static int compareAges(Student st1, Student st2){
+		return ((Integer) st1.getAge()).compareTo(st2.getAge());
+	}
 }

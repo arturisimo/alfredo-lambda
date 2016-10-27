@@ -2,6 +2,10 @@ package apz.java;
 
 import apz.java.itc.ICalculadora;
 
+/**
+ * Nueva API en Java8: Interfaces Funcionales, es una interfaz tiene un único metodo abstracto de uso común.
+ * Son anotadas como @FunctionalInterface y se caracterizan porque pueden ser instanciadas por expresion lambdas. 
+ */
 public class Calculadora {
 	
 	private int x;
@@ -11,7 +15,6 @@ public class Calculadora {
 	ICalculadora division = (x,y) -> x / y;
 	ICalculadora resta = (x,y) -> x - y;
 	ICalculadora multiplicacion = (x,y) -> x*y;
-	
 	
 	public Calculadora(int x, int y) {
 		this.x = x;

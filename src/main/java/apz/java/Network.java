@@ -108,9 +108,7 @@ public class Network {
 		
 		redSocialCursos.forEach((amigo, cursos) -> {
 			sb.append(amigo).append(" [");
-			cursos.forEach(curso->{
-				sb.append(curso).append(",");
-			});
+			cursos.forEach(curso -> sb.append(curso).append(","));
 			sb.append("] \n");
 		});
 		System.out.println(sb.append("------------------------------\n").toString());

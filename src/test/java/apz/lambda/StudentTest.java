@@ -40,5 +40,15 @@ public class StudentTest {
 	}
 	
 	
+	@Test
+	public void testListarEstudiantesPorEdad() {
+		
+		Students instance = new Students(STUDENTS);	
+		
+		List<Student> estudiantes = instance.listEstudiantesPorEdad();
+		assertEquals(estudiantes.size(), 3);
+	}
+	
+	
 
 }
