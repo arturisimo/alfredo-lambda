@@ -1,4 +1,4 @@
-package apz.java;
+package org.apz.collections;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -40,7 +40,7 @@ public class Network {
 	
 	/**
 	 * Obtener una lista de los cursos recibidos por un grupo de amigos. 
-	 * Este grupo es una red social (de 3 niveles de grado de amistad como máximo) 
+	 * Este grupo es una red social (de 3 niveles de grado de amistad como mï¿½ximo) 
 	 * El orden de la lista esta definido por el numero de personas que ha recibido el curso
 	 * @param user
 	 * @return

@@ -2,9 +2,8 @@ package apz.lambda;
 
 import static org.junit.Assert.assertEquals;
 
+import org.apz.calculadora.Calculadora;
 import org.junit.Test;
-
-import apz.java.Calculadora;
 
 public class CalculadoraTest {
 	

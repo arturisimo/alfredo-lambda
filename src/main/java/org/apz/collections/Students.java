@@ -1,10 +1,10 @@
-package apz.java;
+package org.apz.collections;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.function.Predicate;
 
-import apz.java.bean.Student;
+import org.apz.collections.pojo.Student;
 
 
 /**
@@ -26,9 +26,9 @@ public class Students {
 	 * @param ageLow
 	 * @param ageHigh
 	 */
-	public int printPersonsOlderThan(int age) {
+	public long printPersonsOlderThan(int age) {
 		return estudiantes.stream()
-						  .filter(p->p.getAge() > age).toArray().length;
+						  .filter(p->p.getAge() > age).count();
 	}
 	
 	/**
@@ -60,9 +60,7 @@ public class Students {
 	
 	
 	public List<Student> listEstudiantesPorEdad() {
-		
 		Collections.sort(estudiantes, Student::compareAges);
-		
 		return estudiantes;
 	}
 	

@@ -1,16 +1,19 @@
 package apz.lambda;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.Arrays;
 import java.util.List;
 
+import org.apz.collections.Students;
+import org.apz.collections.pojo.Student;
+import org.apz.collections.pojo.Student.Sex;
 import org.junit.Test;
 
-import apz.java.Students;
-import apz.java.bean.Student;
-import apz.java.bean.Student.Sex;
-
-import static org.junit.Assert.*;
-
+/**
+ * Intro Stream
+ *
+ */
 public class StudentTest {
 	
 	private static List<Student> STUDENTS = Arrays.asList(new Student(1, 18, Sex.MALE, "john", 9.90),
@@ -34,8 +37,8 @@ public class StudentTest {
 		
 		Students instance = new Students(STUDENTS);	
 		
-		int numEstudiantes = instance.printPersonsOlderThan(17);
-		assertEquals(numEstudiantes, 1);
+		long numEstudiantes = instance.printPersonsOlderThan(17);
+		assertEquals(numEstudiantes, 1L);
 			
 	}
 	

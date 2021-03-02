@@ -1,4 +1,4 @@
-package apz.java.itc;
+package org.apz.calculadora;
 
 
 @FunctionalInterface

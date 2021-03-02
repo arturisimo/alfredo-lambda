@@ -1,4 +1,4 @@
-package apz.java.bean;
+package org.apz.collections.pojo;
 
 import java.util.List;
 

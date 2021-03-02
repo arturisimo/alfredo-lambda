@@ -1,24 +1,19 @@
-package apz.java.bean;
+package org.apz.collections.pojo;
 
 
 public class Student {
-	   private int id;
-	   private int age;
-	   private Sex gender;
-	   private String fname;
-	   private double cgpa;
+	
+	private int id;
+	private int age;
+	private Sex gender;
+	private String fname;
+	private double cgpa;
 	   
-	   public enum Sex {
+	public enum Sex {
 	        MALE, FEMALE
-	    }
+	}
 	   
-	   /**
-		 * @param id
-		 * @param age
-		 * @param gender
-		 * @param fname
-		 * @param cgpa
-		 */
+	
 	public Student(int id, int age, Sex gender, String fname, double cgpa) {
 	      super();
 	      this.id = id;

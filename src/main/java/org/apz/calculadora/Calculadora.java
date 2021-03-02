@@ -1,9 +1,7 @@
-package apz.java;
-
-import apz.java.itc.ICalculadora;
+package org.apz.calculadora;
 
 /**
- * Nueva API en kkk Java8: Interfaces Funcionales, es una interfaz tiene un único metodo abstracto de uso común.
+ * Nueva API en Java8: Interfaces Funcionales, es una interfaz tiene un Ãºnico metodo abstracto de uso comÃºn.
  * Son anotadas como @FunctionalInterface y se caracterizan porque pueden ser instanciadas por expresion lambdas. 
  */
 public class Calculadora {
