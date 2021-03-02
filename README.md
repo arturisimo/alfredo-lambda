@@ -19,7 +19,7 @@ Se introduce un nuevo interfaz java.util.**Stream** permiten realizar operacione
 
 **Documentacion**
 	
-	 lambda: https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html
+lambda: https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html
 
 # Colecciones en java
 
@@ -60,7 +60,7 @@ Ninguna de las implementaciones de las colecciones son sincronizadas; es decir, 
 
 **Documentacion**
 
-	https://docs.oracle.com/javase/tutorial/collections/TOC.html
+https://docs.oracle.com/javase/tutorial/collections/TOC.html
 
 
 # Genericos en java
