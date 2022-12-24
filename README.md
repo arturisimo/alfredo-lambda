@@ -1,6 +1,6 @@
 # Java SE 1.8
 
-#### Expresiones Lambda
+## Expresiones Lambda
 
 En matemáticas Lambda es una funcion anónima, y es que con las expresiones lambda podemos referenciar métodos anónimos, lo que nos permite escribir código más claro
 
@@ -21,13 +21,48 @@ Se introduce un nuevo interfaz java.util.**Stream** permiten realizar operacione
 	
 lambda: https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html
 
-# Colecciones en java
+### Ejemplos de interfaces funcionales
+
+**Predicate**
+
+Una interfaz Predicate representa una función de valor booleano de un argumento mediante el método *test* se suele usar para filtrar datos en streams.
+
+		Predicate<String> stringLen = (s) -> s.length() < 10;
+	   System.out.println(stringLen.test("Tree"));
+
+**Consumer**
+
+Funcion que acepta una sola entrada y no devuelve ningún resultado. La implementación de esta interfaz consume la entrada que se le proporciona con el método *accept*
+
+	    Consumer<String> consumer = (s) -> System.out.println(s.toLowerCase());
+	    consumerStr.accept("Tree");
+
+**Supplier**
+
+La implementación es un proveedor de resultados. El proveedor solo tiene un método *get()*
+		
+		Supplier<String> supplier = () -> "Java is fun";
+	   System.out.println(supplierStr.get());
+
+
+**Function**
+
+La interfaz de *Function* es más genérica: toma un argumento y produce un resultado mediante el método *apply*
+
+	    R apply(T t);
+	    
+Se suele utilizar en los map para streams:
+
+		List<Integer> nameLength = names.stream().map(functionName).collect(Collectors.toList());
+
+
+## Colecciones en java
 
 Una **colección** agrupa a un conjunto dinámico de elementos, a diferencia de un **array** que es un conjunto estático se fija el tamaño y no puede cambiar.
 
 En Java, se emplea la interfaz genérica java.util.**Collection** para este propósito. Partiendo de Collection extienden otras interfaces genéricas que define los tipos de colecciones según la funcionalidad que se necesite:
 
-## Set
+### Set
 
 Colección que no puede contener elementos duplicados. Para comprobar si los elementos son elementos duplicados o no lo son, es necesario que dichos elementos tengan implementada los métodos *equals* y *hashCode*
 
@@ -42,7 +77,7 @@ Colección que s sí admite elementos duplicados, permite el acceso a un determi
 * ArrayList Se basa en un array redimensionable. Es la que mejor rendimiento tiene sobre la mayoría de situaciones.
 * LinkedList Esta implementación se basa en una lista doblemente enlazada de los elementos, teniendo cada uno de los elementos un puntero al anterior y al siguiente elemento
 
-## Map
+### Map
 
 La interfaz Map asocia claves a valores. Esta interfaz no puede contener claves duplicadas 
 
@@ -63,7 +98,7 @@ Ninguna de las implementaciones de las colecciones son sincronizadas; es decir, 
 https://docs.oracle.com/javase/tutorial/collections/TOC.html
 
 
-# Genericos en java
+## Genericos en java
 
 Los genericos fueron introducidos en el JSE 5; hace referencia a tipos parametrizados. Esto es, se permite crear clases, interfaces y métodos en los que el tipo de datos sobre los que operan se especifica como parámetro. Una clase, interfaz o método que funciona con un tipo de parámetro se denomina genérico, como una clase genérica o método genérico.
 

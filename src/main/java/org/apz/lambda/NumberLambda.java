@@ -22,6 +22,10 @@ public class NumberLambda {
                 boolean result = number.checker(operation, numberToCheck);
                 answer = result ? "ODD" : "EVEN";
             } else if (conditionToCheck == 2) {
+            	Operation operation = number.isPrime();
+            	boolean result = number.checker(operation, numberToCheck);
+            	answer = result ? "PRIME" : "COMPOSITE";
+            } else if (conditionToCheck == 3) {
                 Operation operation = number.isPalindrome();
                 boolean result = number.checker(operation, numberToCheck);
                 answer = result ? "PALINDROME" : "NOT PALINDROME";
@@ -55,6 +59,19 @@ class Number {
             x = x / 10;
         }
         return temp == sum;
+    }
+    
+    public Operation isPrime() {
+        return this::prime;
+    }
+    
+    private boolean prime(int x) {
+        for (int i = 2; i <= x / 2; ++i) {
+            if (x % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }
 
